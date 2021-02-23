@@ -19,6 +19,7 @@ This guide will walk you through setting up the system.
 * Reference jetson_ros_python3.md
 
 ## 6) Setup Oculus Go App
+* Reference oculus_go.md
 
 ## 7) Setup Catkin Workspace
 * Reference catkin_workspace.md
