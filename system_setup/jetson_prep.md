@@ -29,7 +29,12 @@ sudo apt install pulseaudio
 sudo apt install pavucontrol
 ```
 
-## 4) Create software directory
+## 4) Ensure PyQt is installed
+```bash
+sudo apt-get install python3-pyqt5
+```
+
+## 5) Create software directory
 ```bash
 cd
 mkdir Software
