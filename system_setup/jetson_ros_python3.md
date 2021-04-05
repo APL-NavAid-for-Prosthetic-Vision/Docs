@@ -10,7 +10,7 @@ https://confluence.xrcs.jhuapl.edu/confluence/pages/viewpage.action?pageId=67534
 * If you have runtime errors when importing cv2 in python, do the following
 * Create the file /etc/ld.so.conf.d/opencv.conf
 * Write /usr/local/opencv_v3.4.10/lib/ to file
-* sudo ld config -v
+* sudo ldconfig -v
 
 ## 3) Additional Python3 libraries
 * pip3 install screeninfo

@@ -34,7 +34,13 @@ sudo apt install pavucontrol
 sudo apt-get install python3-pyqt5
 ```
 
-## 5) Create software directory
+## 5) Ensure opencv for python 3 is installed
+```bash
+sudo apt-get install python3-opencv
+```
+Do not install opencv through pip3
+
+## 6) Create software directory
 ```bash
 cd
 mkdir Software
