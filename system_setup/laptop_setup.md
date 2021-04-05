@@ -15,7 +15,13 @@ This guide will walk you through setting up the laptop.
 ## 4) Setup Catkin Workspace
 * Reference catkin_workspace.md
 
-## 5) ROS Network
+## 5) Ensure opencv for python 3 is installed
+```bash
+sudo apt-get install python3-opencv
+```
+Do not install opencv through pip3
+
+## 6) ROS Network
 * Disable firewall
     * sudo ufw disable
 * Set static IPv4 for wifi
