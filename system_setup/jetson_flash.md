@@ -3,7 +3,9 @@
 ## Description
 Guide for flashing Jetson AGX Xavier
 
-## TODO
-* I was provided with an already flashed Jetson AGX Xavier running the following L4T version:
-    * R32 (release), REVISION: 3.1, GCID: 18186506, BOARD: t186ref, EABI: aarch64
-    * The system runs Ubuntu 18.04 
+## 1) Flash Jetson
+* https://confluence.xrcs.jhuapl.edu/confluence/display/SLAMR01/Jetpack+SDK+for+Platform
+
+## 2) Add dependencies and expand storage
+* https://confluence.xrcs.jhuapl.edu/confluence/pages/viewpage.action?pageId=78218992
+* Note: my workspace folder name is "slamr01_workspace" instead of "user_workspace"

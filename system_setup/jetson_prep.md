@@ -42,6 +42,10 @@ Do not install opencv through pip3
 
 ## 6) Create software directory
 ```bash
-cd
+cd ~/slamr01_workspace
 mkdir Software
 ```
+## 7) Install RTAB_APL in Software folder
+* https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/rtabmap_apl/browse
+* Install without TOOLS and APPS
+* close/open terminal

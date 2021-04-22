@@ -6,7 +6,7 @@ This guide will walk you through setting up the Jetson AGX Xavier system.
 ## 1) Flash Jetson AGX Xavier
 * Reference jetson_flash.md
 
-## 2) Prepare Jetson AGX Xavier
+## 2) Prepare Jetson AGX Xavier with dependencies
 * Reference jetson_prep.md
 
 ## 3) Install Realsense

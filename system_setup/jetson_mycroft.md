@@ -12,7 +12,7 @@ Guide for installing MycroftAI on Jetson AGX Xavier
 * pactl set-default-source DESIRED-NUM 
 
 ## Install mycroft-core
-* cd ~/Software
+* cd ~/slamr01_workspace/Software
 * git clone https://github.com/MycroftAI/mycroft-core.git
 * cd mycroft-core
 * bash dev_setup.sh
@@ -36,7 +36,7 @@ Guide for installing MycroftAI on Jetson AGX Xavier
 * Add the following to your .bashrc
     * export PYTHONPATH="${PYTHONPATH}:MYCROFTCOREPATH"
     * where MYCROFTCOREPATH is the path of the in mycroft-core folder
-    * For me, this was /home/slamr01jx/Software/mycroft-core
+    * For me, this was /home/slamr01/slamr01_workspace/Software/mycroft-core
 * source .bashrc
 * Test mycroft python import
     * cd
