@@ -47,5 +47,19 @@ mkdir Software
 ```
 ## 7) Install RTAB_APL in Software folder
 * https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/rtabmap_apl/browse
+* build in ~/slamr01_workspace/Software
+* instead of using "./install_octomap.sh build", install RTK compatible OctoMap
+    * build in ~/slamr01_workspace/Software
+    * https://bitbucket.xrcs.jhuapl.edu/projects/RTK/repos/octomap/browse
+    * checkout v1.9.6 branch
+    * Use these commands instead of the ones in the readme
+        * cmake .. -DOCTOMAP_OMP=ON -DBUILD_OCTOVIS_SUBPROJECT=0 -DBUILD_DYNAMICETD3D_SUBPROJECT=0
+        * make -j10 && sudo make install
+        * cmake .. -DOCTOMAP_OMP=ON -DBUILD_OCTOVIS_SUBPROJECT=1 -DBUILD_DYNAMICETD3D_SUBPROJECT=1
+        * make -j10 && sudo make install
 * Install without TOOLS and APPS
 * close/open terminal
+
+## 8) Install RTK/PUMA
+* https://confluence.xrcs.jhuapl.edu/confluence/pages/viewpage.action?pageId=78219191
+* Checkout octomap_v1.9.6 branch of RTK

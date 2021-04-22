@@ -27,6 +27,8 @@ Clone the following repositories following this directory structure.  Where appl
         |-- spatialsound (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/spatialsound/browse)
         |-- voiceinterface (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/voiceinterface/browse)
         |-- rtabmap_ros (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/rtabmap_ros/browse) (comment out all references to and usage of objectrecognition)
+        |-- capra (https://bitbucket.xrcs.jhuapl.edu/projects/RAR/repos/capra/browse)
+        |-- rtk_ros (https://bitbucket.xrcs.jhuapl.edu/projects/RAR/repos/rtk_ros/browse)
         |-- extern
             |-- realsense-ros (https://github.com/IntelRealSense/realsense-ros)
             |-- ddynamic_reconfigure (https://github.com/pal-robotics/ddynamic_reconfigure)
