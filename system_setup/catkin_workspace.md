@@ -13,7 +13,7 @@ sudo catkin build
 ```
 
 ## Project Directory Structure
-Clone the following repositories following this directory structure.  Where applicable, checkout melodic branches
+Clone the following repositories following this directory structure (links included below are not the clone links, they are the website links).  Where possible, checkout melodic branches
 ~~~
 |-- slamr01_ws
     |-- build
@@ -26,9 +26,10 @@ Clone the following repositories following this directory structure.  Where appl
         |-- navmap (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/navmap/browse) (set enable_semanticSegmentation to false in launch files)
         |-- spatialsound (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/spatialsound/browse)
         |-- voiceinterface (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/voiceinterface/browse)
-        |-- rtabmap_ros (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/rtabmap_ros/browse) (comment out all references to and usage of objectrecognition)
+        |-- rtabmap_ros (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/rtabmap_ros/browse)
         |-- capra (https://bitbucket.xrcs.jhuapl.edu/projects/RAR/repos/capra/browse)
         |-- rtk_ros (https://bitbucket.xrcs.jhuapl.edu/projects/RAR/repos/rtk_ros/browse)
+        |-- semantic_seg_ros (https://gitlab.jhuapl.edu/slamr01/semantic_seg_ros)
         |-- extern
             |-- realsense-ros (https://github.com/IntelRealSense/realsense-ros)
             |-- ddynamic_reconfigure (https://github.com/pal-robotics/ddynamic_reconfigure)
@@ -38,7 +39,12 @@ Clone the following repositories following this directory structure.  Where appl
             |-- octomap_rviz_plugins (https://github.com/OctoMap/octomap_rviz_plugins)
 ~~~
 
+# semantic_seg_ros
+* You must be on the internal APL network to download/clone this repo, so you won't be able to clone it onto the jetson directly
+* On a computer connected to the internal network, download the repo. Transfer it to the jetson with a flashdrive
+
 ## Build workspace
 ```bash
-sudo catkin build
+catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3
+sudo catkin build --cmake-args -DOPENCV_CUDA=ON -DWITH_YAMLCPP=ON -DRTABMAP_GUI=OFF
 ```

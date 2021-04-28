@@ -3,6 +3,9 @@
 ## Description
 This guide will walk you through setting up the Jetson AGX Xavier system.
 
+## 0) Acquire necessary hardware
+* Reference harware_list.md
+
 ## 1) Flash Jetson AGX Xavier
 * Reference jetson_flash.md
 

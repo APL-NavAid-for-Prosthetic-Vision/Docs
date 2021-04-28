@@ -62,4 +62,10 @@ mkdir Software
 
 ## 8) Install RTK/PUMA
 * https://confluence.xrcs.jhuapl.edu/confluence/pages/viewpage.action?pageId=78219191
+* build in ~/slamr01_workspace/Software
 * Checkout octomap_v1.9.6 branch of RTK
+
+## 9) Install Pytorch
+* https://confluence.xrcs.jhuapl.edu/confluence/display/SLAMR01/PyTorch
+* download pytorch wheel and torchvision repo in ~/slamr01_workspace/Software
+* I did not install PyTorch-Encoding
