@@ -17,6 +17,7 @@ A list of hardware components. All ebuy purchases have been recorded here: https
 * Intel Realsense T265 w/ cable
 * Intel Realsense D455 w/ cable
 * Dual lock (for mounting)
+* Aeropex Aftershokz	
 
 ## 3) Mobile System
 * Belt
