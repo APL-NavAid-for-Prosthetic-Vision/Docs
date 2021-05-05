@@ -52,10 +52,7 @@ Guide for installing MycroftAI on Jetson AGX Xavier
         * source ${VIRTUALENV_ROOT}/bin/activate
     * With 
         * echo "Using system python" # source ${VIRTUALENV_ROOT}/bin/activate
-* ./start-mycroft.sh debug
-    * If command line states "Changing ownership of /opt/mycroft to user:" and asks for sudo password
-        * Hit Ctrl+C: don't give it your sudo password
-        * This causes some permission issue, not sure why
+* sudo ./start-mycroft.sh debug
     * Mycroft voice output will not work yet
     * In the HISTORY log, mycroft lists instructions for setting up the device
         * Open browser, navigate to home.mycroft.ai
@@ -68,14 +65,11 @@ Guide for installing MycroftAI on Jetson AGX Xavier
                 * Select Google Voice (Other options will not work)
                 * Select Wake Word (I used Hey Mycroft)
     * quit (Ctrl+C)
-* ./start-mycroft.sh restart all
-* ./stop-mycroft.sh
+* sudo ./stop-mycroft.sh
 
 ## Test Mycroft
 * sudo ./start-mycroft.sh debug
-    * If command line states "Changing ownership of /opt/mycroft to user:" and asks for sudo password
-        * Hit Ctrl+C: don't give it your sudo password
-        * This causes some permission issue, not sure why
+    * If you get an "Illegal instruction (core dumped)" error, see next step
 * Speak: "Hey Mycroft"
 * Wait for confirmation sound
 * Speak: "What's the weather like?"
@@ -88,3 +82,6 @@ Guide for installing MycroftAI on Jetson AGX Xavier
 * To resolve this error, downgrade numpy from 1.19.5 to 1.19.4
     * pip3 uninstall numpy
     * pip3 install numpy==1.19.4
+
+## Test Mycroft (Again)
+* With the "Illegal instruction (core dumped)" error resolved, repeat Test Mycroft step
