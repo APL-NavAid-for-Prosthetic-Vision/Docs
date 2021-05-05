@@ -7,7 +7,7 @@ Guide for installing MycroftAI on Jetson AGX Xavier
 * pactl list sinks short
 * Note microphone you want to use
 * pactl set-default-sink DESIRED-NUM
-* pactl list source short
+* pactl list sources short
 * Note speaker you want to use
 * pactl set-default-source DESIRED-NUM 
 
@@ -72,7 +72,7 @@ Guide for installing MycroftAI on Jetson AGX Xavier
 * ./stop-mycroft.sh
 
 ## Test Mycroft
-* ./start-mycroft.sh debug
+* sudo ./start-mycroft.sh debug
     * If command line states "Changing ownership of /opt/mycroft to user:" and asks for sudo password
         * Hit Ctrl+C: don't give it your sudo password
         * This causes some permission issue, not sure why
@@ -82,3 +82,9 @@ Guide for installing MycroftAI on Jetson AGX Xavier
 * Listen for response
 * quit (Ctrl+C)
 * ./stop-mycroft.sh
+
+## Downgrade Numpy to resolve "Illegal instruction (core dumped)"
+* At somepoint in this processes, you may get a "Illegal instruction (core dumped)" error when running mycroft
+* To resolve this error, downgrade numpy from 1.19.5 to 1.19.4
+    * pip3 uninstall numpy
+    * pip3 install numpy==1.19.4
