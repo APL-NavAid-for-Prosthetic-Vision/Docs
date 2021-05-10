@@ -30,6 +30,7 @@ Clone the following repositories following this directory structure (links inclu
         |-- capra (https://bitbucket.xrcs.jhuapl.edu/projects/RAR/repos/capra/browse)
         |-- rtk_ros (https://bitbucket.xrcs.jhuapl.edu/projects/RAR/repos/rtk_ros/browse)
         |-- semantic_seg_ros (https://gitlab.jhuapl.edu/slamr01/semantic_seg_ros)
+        |-- gui_hst (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/gui_hst/browse)
         |-- extern
             |-- realsense-ros (https://github.com/IntelRealSense/realsense-ros)
             |-- ddynamic_reconfigure (https://github.com/pal-robotics/ddynamic_reconfigure)
