@@ -25,7 +25,7 @@ Do not install opencv through pip3
 * Disable firewall
     * sudo ufw disable
 * Set static IPv4 for wifi
-    * IP=192.168.3.201, NETMASK= 255.255.255.0, GATEWAY=192.168.30
+    * IP=192.168.3.201, NETMASK= 255.255.255.0, GATEWAY=192.168.3.0
 * Add the following lines to ~/.bashrc
     * alias slamr01jxros="export ROS_MASTER_URI=http://192.168.3.101:11311 && export ROS_IP=192.168.3.201"
     * alias slamr01jxssh="ssh slamr01jx@192.168.3.101"
