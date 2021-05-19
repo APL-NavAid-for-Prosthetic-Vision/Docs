@@ -9,3 +9,4 @@ Guide for setting up ROS with Python3 on the Jetson AGX Xavier
 
 ## 2) Additional Python3 libraries
 * pip3 install screeninfo
+* pip install keyboard

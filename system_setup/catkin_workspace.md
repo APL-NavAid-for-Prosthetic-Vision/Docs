@@ -31,6 +31,7 @@ Clone the following repositories following this directory structure (links inclu
         |-- rtk_ros (https://bitbucket.xrcs.jhuapl.edu/projects/RAR/repos/rtk_ros/browse)
         |-- semantic_seg_ros (https://gitlab.jhuapl.edu/slamr01/semantic_seg_ros)
         |-- gui_hst (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/gui_hst/browse)
+        |-- haptic (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/haptic/browse)
         |-- extern
             |-- realsense-ros (https://github.com/IntelRealSense/realsense-ros)
             |-- ddynamic_reconfigure (https://github.com/pal-robotics/ddynamic_reconfigure)
@@ -43,6 +44,11 @@ Clone the following repositories following this directory structure (links inclu
 # semantic_seg_ros
 * You must be on the internal APL network to download/clone this repo, so you won't be able to clone it onto the jetson directly
 * On a computer connected to the internal network, download the repo. Transfer it to the jetson with a flashdrive
+
+# pylibi2c
+* pylibi2c must be installed for the haptics interface
+    * cd slamr01_ws/src/haptic/libi2c-master
+    * sudo python setup.py install
 
 ## Build workspace
 ```bash
