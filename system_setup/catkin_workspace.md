@@ -39,6 +39,7 @@ Clone the following repositories following this directory structure (links inclu
             |-- octomap_msgs (https://github.com/OctoMap/octomap_msgs)
             |-- octomap_ros (https://github.com/OctoMap/octomap_ros)
             |-- octomap_rviz_plugins (https://github.com/OctoMap/octomap_rviz_plugins)
+            |-- robot_state_publisher (https://github.com/ros/robot_state_publisher.git) (melodic-devel)
 ~~~
 
 # semantic_seg_ros
