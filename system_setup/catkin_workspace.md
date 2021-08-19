@@ -24,7 +24,6 @@ Clone the following repositories following this directory structure (links inclu
         |-- docs (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/docs/browse)
         |-- vr (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/vr/browse)
         |-- navmap (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/navmap/browse) (set enable_semanticSegmentation to false in launch files)
-        |-- spatialsound (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/spatialsound/browse)
         |-- voiceinterface (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/voiceinterface/browse)
         |-- rtabmap_ros (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/rtabmap_ros/browse)
         |-- capra (https://bitbucket.xrcs.jhuapl.edu/projects/RAR/repos/capra/browse)
@@ -33,12 +32,14 @@ Clone the following repositories following this directory structure (links inclu
         |-- gui_hst (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/gui_hst/browse)
         |-- haptic (https://bitbucket.xrcs.jhuapl.edu/projects/SLAMR01/repos/haptic/browse)
         |-- extern
+            |-- aruco_ros (https://github.com/pal-robotics/aruco_ros)
             |-- realsense-ros (https://github.com/IntelRealSense/realsense-ros)
             |-- ddynamic_reconfigure (https://github.com/pal-robotics/ddynamic_reconfigure)
             |-- image_pipeline (https://github.com/ros-perception/image_pipeline) (remove image_view package)
             |-- octomap_msgs (https://github.com/OctoMap/octomap_msgs)
             |-- octomap_ros (https://github.com/OctoMap/octomap_ros)
             |-- octomap_rviz_plugins (https://github.com/OctoMap/octomap_rviz_plugins)
+            |-- perception_pcl (https://github.com/ros-perception/perception_pcl/tree/melodic-devel)
             |-- robot_state_publisher (https://github.com/ros/robot_state_publisher.git) (melodic-devel)
 ~~~
 

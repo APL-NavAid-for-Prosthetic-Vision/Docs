@@ -8,5 +8,4 @@ Guide for setting up ROS with Python3 on the Jetson AGX Xavier
 * I built ros_melodic_catkin_ws in ~/slamr01_workspace/Software
 
 ## 2) Additional Python3 libraries
-* pip3 install screeninfo
-* pip install keyboard
+* pip3 install screeninfo, keyboard, gTTS

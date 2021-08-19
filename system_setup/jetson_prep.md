@@ -22,6 +22,7 @@ Guide for preparing Jetson
 ```bash
 sudo apt-get install libopenal-dev
 sudo apt-get install libalut-dev
+pip3 install python-openal
 ```
 
 ## 3) Set up pulseaudio
