@@ -3,7 +3,24 @@
 ## Description
 Guide for installing MycroftAI on Jetson AGX Xavier
 
-## Set default microphone and speaker
+## 1) Enable Bluetooth Audio
+* Navigate to this file:
+    * /lib/systemd/system/bluetooth.service.d/nv-bluetooth-service.conf
+* Use a text editor to change this line ...
+    * ExecStart=/usr/lib/bluetooth/bluetoothd -d --noplugin=audio,a2dp,avrcp
+* ... to this: 
+    * ExecStart=/usr/lib/bluetooth/bluetoothd -d 
+* Enter these commands to update the apt-get package list and install the pulse audio package:
+    * sudo apt-get update
+    * sudo apt-get install pulseaudio-module-bluetooth
+* Enter this command to reboot the Jetson device:
+    * sudo reboot
+* When the reboot is complete, pair and connect any Bluetooth headset.
+* Source: https://docs.nvidia.com/jetson/l4t/index.html#page/Tegra%20Linux%20Driver%20Package%20Development%20Guide/hw_setup.html#wwpID0E0KN0HA 
+
+
+## 2) Set default microphone and speaker
+* Connect bluetooth headphones
 * pactl list sinks short
 * Note microphone you want to use
 * pactl set-default-sink DESIRED-NUM
@@ -11,7 +28,7 @@ Guide for installing MycroftAI on Jetson AGX Xavier
 * Note speaker you want to use
 * pactl set-default-source DESIRED-NUM 
 
-## Install mycroft-core
+## 3) Install mycroft-core
 * cd ~/slamr01_workspace/Software
 * git clone https://github.com/MycroftAI/mycroft-core.git
 * cd mycroft-core
@@ -24,10 +41,11 @@ Guide for installing MycroftAI on Jetson AGX Xavier
 * Add the following to your .bashrc:
     * source ~/.profile_mycroft
 
-## Set up python
-* NOTE: dev_setup.sh sets up a virtual environment to use mycroft with.  
+## 4) Set up python
+* NOTE: dev_setup.sh sets up a virtual environment to use mycroft with.
     * This virtual environment did not work for me.
     * I set up the system python to work with mycroft instead
+    * Better to use system python anyway for ROS compatability
 * pip3 install -r requirements/requirements.txt
 * pip3 install -r requirements/extra-audiobackend.txt
 * pip3 install -r requirements/extra-stt.txt
@@ -45,7 +63,7 @@ Guide for installing MycroftAI on Jetson AGX Xavier
     * quit()
     * cd Software/mycroft-core
 
-## Set up mycroft device
+## 5) Set up mycroft device
 * Ensure you are connected to the internet
 * Edit start-mycroft.sh
     * Replace line 83: 
@@ -67,7 +85,7 @@ Guide for installing MycroftAI on Jetson AGX Xavier
     * quit (Ctrl+C)
 * sudo ./stop-mycroft.sh
 
-## Test Mycroft
+## 6) Test Mycroft
 * sudo ./start-mycroft.sh debug
     * If you get an "Illegal instruction (core dumped)" error, see next step
 * Speak: "Hey Mycroft"
@@ -77,11 +95,17 @@ Guide for installing MycroftAI on Jetson AGX Xavier
 * quit (Ctrl+C)
 * ./stop-mycroft.sh
 
-## Downgrade Numpy to resolve "Illegal instruction (core dumped)"
+## 7) Downgrade Numpy to resolve "Illegal instruction (core dumped)"
 * At somepoint in this processes, you may get a "Illegal instruction (core dumped)" error when running mycroft
 * To resolve this error, downgrade numpy from 1.19.5 to 1.19.4
     * pip3 uninstall numpy
     * pip3 install numpy==1.19.4
 
-## Test Mycroft (Again)
+## 8) Test Mycroft (Again)
 * With the "Illegal instruction (core dumped)" error resolved, repeat Test Mycroft step
+
+## 9) Fix Aftershokz Aeropex buzz at wake word
+* While running mycroft with the Aftershokx Aeropex, the Aeropex makes a deafening buzz sound after the wakeword
+* I have only been able to fix this by editting the Mycroft source code
+* Open the mic.py file (for me: /home/slamr01/slamr01_workspace/Software/mycroft-core/mycroft/client/speech/mic.py)
+    * Comment out line 734: emitter.emit("recognizer_loop:record_begin")

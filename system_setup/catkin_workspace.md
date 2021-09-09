@@ -8,7 +8,7 @@ Guide for setting up the project catkin workspace
 cd ~/slamr01_workspace
 mkdir slamr01_ws && cd slamr01_ws
 mkdir src
-sudo catkin config --init -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 --extend /opt/ros/melodic --blacklist audio_3D_ros2
+sudo catkin config --init -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 --extend /opt/ros/melodic --blacklist audio_3D_ros2 voice_ui_ros2
 sudo catkin build
 ```
 
@@ -52,8 +52,12 @@ Clone the following repositories following this directory structure (links inclu
     * cd slamr01_ws/src/haptic/libi2c-master
     * sudo python setup.py install
 
-## Build workspace
+# Build workspace
 ```bash
-catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3
 sudo catkin build --cmake-args -DOPENCV_CUDA=ON -DWITH_YAMLCPP=ON -DRTABMAP_GUI=OFF
+```
+
+## Install voiceinterface skills
+```bash
+./src/voiceinterface/voice_ui/skills/install_skills.sh
 ```

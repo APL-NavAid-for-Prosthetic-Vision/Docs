@@ -25,8 +25,3 @@ Guide for setting up the oculus go app
 * Hit Oculus Go device, note mac address under controller
 * In Jetson Xavier terminal, "arp -a"
 * Find ip address associated with Oculus Go mac address
-
-## Test app
-```bash
-roslaunch core_test vr.launch oculus_ip_address:=insert_ip_address_here
-```
