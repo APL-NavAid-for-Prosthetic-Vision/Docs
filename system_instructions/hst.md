@@ -39,7 +39,7 @@
     * Setup ROS variables: ‘slamr01jxros’
     * Navigate to ros workspace ‘cd slamr01_workspace/slamr01_ws’
     * Source ROS setup: ‘source devel/setup.bash’
-* Run argus and guI
-    * First: In terminal 1, run: ‘roslaunch core_test argus_gui.launch’
-    * Second: In terminal 2, run: ‘roslaunch core_test argus_gui.launch’
+* Run argus and gui
+    * First: In terminal 1, run: ‘roslaunch core_test argus_hst.launch’
+    * Second: In terminal 2, run: ‘roslaunch core_test gui.launch’
     * Use GUI to run HST
