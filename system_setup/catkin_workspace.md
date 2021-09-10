@@ -8,7 +8,7 @@ Guide for setting up the project catkin workspace
 cd ~/slamr01_workspace
 mkdir slamr01_ws && cd slamr01_ws
 mkdir src
-sudo catkin config --init -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 --extend /opt/ros/melodic --blacklist audio_3D_ros2 voice_ui_ros2
+sudo catkin config --init -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 --extend /opt/ros/melodic --blacklist voice_ui_ros2
 sudo catkin build
 ```
 
